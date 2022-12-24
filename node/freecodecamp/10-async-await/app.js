@@ -47,4 +47,4 @@ const procesarPedido = (respuesta)=>{
     }
 }
 
-realizarPedido('taza')
+realizarPedido('lapiz')
