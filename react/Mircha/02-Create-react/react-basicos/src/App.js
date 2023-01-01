@@ -1,4 +1,6 @@
 import logo from './logo.svg';
+import {ComponenteClase, ComponenteFuncional} from './components/componente';
+import { Propiedades } from './components/propiedades';
 import './App.css';
 
 function App() {
@@ -17,6 +19,21 @@ function App() {
         >
           Learn React
         </a>
+      <section>
+        <ComponenteClase msg='Hola soy un componente de clase'/> {/* Aca estamos pasando una propiedad desde el componente. */}
+        <ComponenteFuncional msg='Hola soy un componente funcional'/>
+        <hr/>
+        <Propiedades 
+          cadena='Esto es una cadena de texto' 
+          numero = {20}
+          buleano = {true}
+          arreglo = {['pepe',12,'true']}
+          objeto = {{Nombre: 'Diego', Apellido: 'Ziraldo'}}
+          funcion = {(num) => num * num}
+          elementoReact={<i>Esto es un elemento React</i>}
+          componenteReact={<ComponenteClase ComponenteClase msg='Hola soy un componente de clase pasado como Props'/>}
+          />
+      </section>
       </header>
     </div>
   );
