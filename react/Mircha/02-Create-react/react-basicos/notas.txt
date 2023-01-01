@@ -1,0 +1,2 @@
+Con react podemos tener componentes como clases o componentes como funciones.
+
