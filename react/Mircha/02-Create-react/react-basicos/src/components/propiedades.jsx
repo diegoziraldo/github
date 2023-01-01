@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 export const Propiedades = (props)=>{
     return(
@@ -23,3 +24,8 @@ export const Propiedades = (props)=>{
 Propiedades.defaultProps = {
     porDefecto: "Las props",
 };
+
+//Con prop-Types vamos a poder validar las propuedades con un tipo de dato en concreto
+Propiedades.propsTypes = {
+    numero: PropTypes.number
+}
