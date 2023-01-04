@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import {ComponenteClase, ComponenteFuncional} from './components/componente';
 import { Propiedades } from './components/propiedades';
+import Estado from './components/estado' 
 import './App.css';
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
           elementoReact={<i>Esto es un elemento React</i>}
           componenteReact={<ComponenteClase ComponenteClase msg='Hola soy un componente de clase pasado como Props'/>}
           />
+          <hr/>
+          <Estado/>
       </section>
       </header>
     </div>
