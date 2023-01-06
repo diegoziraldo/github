@@ -1,22 +1,4 @@
-const mongoose = require('mongoose');
-
-const url = 'mongodb://127.0.0.1/mongoCurso'
-
-mongoose.connect(url)
-.then(()=>{
-    console.log('Conectado a mongoDB');
-})
-.catch((e)=>console.log('error de coneccion ' + e));
-
-
-
-
-const clienteSchema = mongoose.Schema({
-    nombre: String
-})
-
-const ClienteModel = mongoose.model('cliente', clienteSchema)
-
+const {ClienteModel} = require('../Schema/schema.js');
 
 //Funcion crear
 const crear = async()=>{
@@ -37,7 +19,7 @@ const modificar = async(id)=>{
     const cliente = await ClienteModel.updateOne({_id:id},
     {
         $set:{
-            nombre:"yani"
+            nombre:"Ziraldo"
         }
     })
 }
@@ -50,8 +32,5 @@ const eliminar = async(id)=>{
 
 
 
-//crear()
-//modificar('63b22db6d9b1154da48302e0')
-eliminar('63b237728d6ff844efb45523')
 
-mostrar()
+module.exports = {crear, mostrar, modificar, eliminar}
