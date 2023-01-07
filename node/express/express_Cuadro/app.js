@@ -7,6 +7,9 @@ const dbConnect = require('./db/db.js');
 const {crear, mostrar,modificar, eliminar} = require('./functions/functions.js');
 
 var indexRouter = require('./routes/index');
+var indexProveedores = require('./routes/proveedores');
+let indexClientes = require('./routes/clientes')
+var indexProductos = require('./routes/productos');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -21,6 +24,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/proveedores', indexProveedores);
+app.use('/clientes', indexClientes);
+app.use('/productos', indexProductos);
 app.use('/users', usersRouter);
 
 

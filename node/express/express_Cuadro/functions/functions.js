@@ -1,9 +1,9 @@
 const {ClienteModel} = require('../Schema/schema.js');
 
 //Funcion crear
-const crear = async()=>{
+const crear = async(nombre)=>{
     const cliente = new ClienteModel({
-        nombre: "Diego"
+        nombre
     }) 
     const resultado = await cliente.save()
 }
