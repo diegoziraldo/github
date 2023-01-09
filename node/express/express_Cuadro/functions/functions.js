@@ -11,7 +11,7 @@ const crear = async(nombre)=>{
 //Funcion mostrar
 const mostrar = async()=>{
     const cliente = await ClienteModel.find()
-    console.log(cliente);
+    console.log('cliente');
 }
 
 //Funcion modificar
