@@ -3,15 +3,22 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const test = require('./controllers/article')
 const mongoose = require('mongoose');
+
 const article_routes = require('./routes/article');
+
 
 
 const app = express();
 const port = 3000;
 
-//Aca vamos a configurar una direccion para la base de datos.
-let url = 'mongodb://localhost::27017/api_rest_reactnotas';
-mongoose.Promise = global.Promise; //Con esta linea evitaremos fallos en la conexion
+let url = 'mongodb://127.0.0.1/api-rest_reactnotas';
+
+let articleRoutes = require('./routes/article');
+
+
+mongoose.Promise = global.Promise;  //Con esta linea evitaremos problemas en la conexion de la base de datos.
+
+
 
 //body-parser, es un middleware para analizar cuerpos a traves de la url.
 app.use(bodyParser.urlencoded({extended: false}))
@@ -28,12 +35,16 @@ app.use((req,res, next)=>{
     next();
 })
 
-app.use('/api', article_routes);
+app.use('/api', articleRoutes);
 
-
-
-
-app.listen(port,()=>{
-    console.log(`Se esta ejecutando en el puerto: ${port}`);
+mongoose.set('strictQuery', true);
+mongoose.connect(url, {useNewUrlParser:true}).then(()=>{
+    console.log('conexion exitosa');
+    app.listen(port,()=>{
+        console.log(`Se esta ejecutando en el puerto: ${port}`);
+    });
 })
+
+
+
 
