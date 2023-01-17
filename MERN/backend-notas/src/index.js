@@ -1,10 +1,17 @@
 'use strict'
-
 const express = require('express')
 const bodyParser = require('body-parser')
+const test = require('./controllers/article')
+const mongoose = require('mongoose');
+const article_routes = require('./routes/article');
+
 
 const app = express();
 const port = 3000;
+
+//Aca vamos a configurar una direccion para la base de datos.
+let url = 'mongodb://localhost::27017/api_rest_reactnotas';
+mongoose.Promise = global.Promise; //Con esta linea evitaremos fallos en la conexion
 
 //body-parser, es un middleware para analizar cuerpos a traves de la url.
 app.use(bodyParser.urlencoded({extended: false}))
@@ -19,9 +26,9 @@ app.use((req,res, next)=>{
     res.header('Access-Control-Allow-Methods', 'GET, POST,OPTIONS,PUT,DELETE')
     res.header('Allow', 'GET, POST,OPTIONS,PUT,DELETE')
     next();
-
 })
 
+app.use('/api', article_routes);
 
 
 

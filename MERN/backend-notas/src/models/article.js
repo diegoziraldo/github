@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 //Aca vamos a crear un Schema
-let ArticleAchema = new Schema({
+let ArticleSchema = new Schema({
     title: String,
     date: {type: Date, default:Date.now},
     content: String,
     author: String
 })
 
-module.exports = mongoose.model('Article', ArticleSchema);
+module.exports = mongoose.model('Article',ArticleSchema)
