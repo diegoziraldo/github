@@ -9,7 +9,7 @@ const article_routes = require('./routes/article');
 
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 let url = 'mongodb://127.0.0.1/api-rest_reactnotas';
 
