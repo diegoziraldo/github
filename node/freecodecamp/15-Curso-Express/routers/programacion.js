@@ -8,7 +8,7 @@ routerProgramacion.get('/', (req,res)=>{
     res.send(JSON.stringify(programacion))
 })
 
-console.log();
+
 
 routerProgramacion.get('/:lenguaje', (req,res)=>{
     const lenguaje = req.params.lenguaje;
