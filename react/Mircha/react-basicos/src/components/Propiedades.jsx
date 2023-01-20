@@ -5,9 +5,9 @@ export const Propiedades = (props)=>{
     return(
         <>
             <h2>Propiedades</h2>
-            <h3>{props.porDefecto}</h3>
+            <h3>{props.porDefecto}</h3> {/* Aca estmos usando la propiedad por defecto que seteamos anteriormente */}
             <ul>
-                <li>{props.cadena}</li>
+                <li>{props.cadena}</li> 
                 <li>{props.numero}</li>
                 <li>{props.buleano ? "Verdadero" : "Falso"}</li>
                 <li>{props.arreglo.join(', ')}</li>
@@ -25,7 +25,7 @@ Propiedades.defaultProps = {
     porDefecto: "Las props",
 };
 
-//Con prop-Types vamos a poder validar las propuedades con un tipo de dato en concreto
+//Con propTypes vamos a poder validar las propiedades con un tipo de dato en concreto
 Propiedades.propsTypes = {
     numero: PropTypes.number
 }

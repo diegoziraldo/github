@@ -9,7 +9,8 @@ const port = process.env.PORT || 3000;
 
 //middleware
 //Con este middleware podremos ponerle un prefijo a la ruta.
-app.use('/api', userRoutes)
+app.use(express.json());
+app.use('/api', userRoutes);
 
 
 
