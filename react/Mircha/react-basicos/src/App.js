@@ -2,7 +2,10 @@ import logo from './logo.svg';
 import {ComponenteClase, ComponenteFuncional} from './components/Componente';
 import { Propiedades } from './components/Propiedades';
 import Estado from './components/Estado' 
+import RenderizadoCondicional from './components/RenderizadoCondicional';
 import './App.css';
+import RenderizadoElementos from './components/RenderizadoElementos';
+
 
 function App() {
   return (
@@ -36,6 +39,10 @@ function App() {
           />
           <hr/>
           <Estado />
+          <hr/>
+          <RenderizadoCondicional />
+          <hr/>
+          <RenderizadoElementos />
       </section>
       </header>
     </div>
