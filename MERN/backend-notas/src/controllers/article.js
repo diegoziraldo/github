@@ -29,7 +29,9 @@ let controller = {
                 status: 'success',
                 articleStored
             });
+
         });
+        console.log('se guardo');
     },
 
     //Metodo obtener un articulo:
@@ -53,6 +55,7 @@ let controller = {
                 articles
             })
         })
+        console.log('se obtuvo');
     },
 
     //Metodo eliminar un articulo:
@@ -78,6 +81,7 @@ let controller = {
                 message: articleRemoved
             });
         })
+        console.log('se elimino');
     }
 }
 

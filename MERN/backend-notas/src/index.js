@@ -15,6 +15,10 @@ let url = 'mongodb+srv://diegoziraldo:1234@cluster0.7yxf0um.mongodb.net/test';
 
 let articleRoutes = require('./routes/article');
 
+app.get('/',(req,res)=>{
+    res.send('Index')
+})
+
 
 mongoose.Promise = global.Promise;  //Con esta linea evitaremos problemas en la conexion de la base de datos.
 

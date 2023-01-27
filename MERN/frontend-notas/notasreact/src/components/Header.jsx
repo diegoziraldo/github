@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom' /* con este componente vamos a poder usar el enrutador de manera que no tenga que renderizar toda la pagina*/
 import logo from "../assets/img/logo.svg";
 
 const Header = ()=>{
