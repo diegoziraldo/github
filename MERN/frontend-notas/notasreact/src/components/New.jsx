@@ -7,7 +7,7 @@ const New = ()=>{
 
     const url = Global.url;
 
-    const [article, setArticle] = useState({
+    const [article, setArticle] = useState({ /* Con este hook setearemos las propiedades del articulo */
         title: null,
         content: null,
         author: null,
@@ -15,7 +15,7 @@ const New = ()=>{
 
     const [redirect, setRedirect] = useState(false)
 
-    //Referencia de los datos del formulario:
+    //Aca vamos a capturar los datos del formulario:
     let titleRef = React.createRef();
     let contentRef = React.createRef();
     let authorRef = React.createRef();
