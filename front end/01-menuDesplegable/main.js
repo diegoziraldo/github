@@ -6,9 +6,12 @@ listElements.forEach(listElement => {
         listElement.classList.toggle('arrow');
 
         let height = 0;
+        let menu = listElement.nextElementSibling; /* Con esta propiedad podremos obtener el hermano adyacente del nodo capturado */
+        if(menu.clientHeight == '0'){
+            height = menu.scrollHeight
+        }
 
-        let menu = listElement.nextElementSibling;
+        menu.style.height = `${height}px`
 
-        
     })
 })
