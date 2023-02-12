@@ -5,7 +5,7 @@ require ('./database')
 
 const main = async()=>{
     
-    await app.listen(3000)
+    await app.listen(app.get('port'))
         console.log('Server on port 3000');
 
 }
