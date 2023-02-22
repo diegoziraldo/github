@@ -13,7 +13,7 @@ notesControllers.getNotes = async (req,res)=>{
 }
 
 notesControllers.createNote = async(req,res)=>{
-    const {title, content, autor, date} = req.body;
+    const {title, content, author, date} = req.body;
         const newNote = new Note({
             title,
             content,
