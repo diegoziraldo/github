@@ -1,0 +1,15 @@
+""" CON ESTAS COMILLAS PODREMOS PONER TEXTO EN SOLO UNA LINEA """
+"string"
+'string'
+
+""" CON ESTAS COMILLAS PODREMOS PONER TEXTO EN VARIAS LINEAS """
+"""string"""
+'''string'''
+
+40
+
+40.1
+
+True
+False
+
