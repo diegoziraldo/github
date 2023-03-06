@@ -15,7 +15,7 @@ conjunto = {'Diego Ziraldo', True, 1.70} #En un conjunto no pueden haber datos d
 print(conjunto)
 
 
-#ACA ESTAMOS CREANDO UN DICCIONARIO (dict)
+#ACA ESTAMOS CREANDO UN DICCIONARIO (dict) - La estructura es 'key':'value',
 diccionario = {
     'nombre':'Diego',
     'apellido':'Ziraldo',
